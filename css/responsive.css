@@ -1,0 +1,189 @@
+@media (max-width: 1100px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+  .crop-grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .footer-brand { grid-row: span 2; }
+  .catalog-toolbar { grid-template-columns: 1fr; }
+  .category-filter { justify-content: flex-start; }
+}
+
+@media (max-width: 900px) {
+  .section { padding: 76px 0; }
+
+  .menu-toggle { display: grid; place-items: center; }
+
+  .nav-links {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: calc(100% + 8px);
+    display: grid;
+    gap: 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: white;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: .2s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links > a:not(.btn) {
+    padding: 13px 12px;
+  }
+
+  .nav-links > a:not(.btn)::after { display: none; }
+
+  .nav-quote { margin: 7px 0 0; }
+
+  .hero-content {
+    min-height: 620px;
+    align-items: end;
+  }
+
+  .hero-stat-card { display: none; }
+
+  .automation-layout,
+  .about-layout,
+  .detail-layout,
+  .contact-layout,
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .detail-layout { gap: 35px; }
+
+  .product-grid,
+  .product-grid-featured { grid-template-columns: repeat(2, 1fr); }
+
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .trust-grid div:nth-child(3),
+  .trust-grid div:nth-child(4) { border-top: 1px solid var(--border); }
+
+  .split-heading { align-items: start; }
+
+  .page-hero-inner { align-items: flex-start; }
+
+  .page-hero-icon { display: none; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .container { width: min(calc(100% - 28px), var(--container)); }
+
+  .topbar-inner {
+    min-height: 42px;
+    justify-content: center;
+  }
+
+  .topbar-contact span { display: none; }
+  .topbar-contact,
+  .topbar-socials { gap: 13px; }
+
+  .nav-inner { min-height: 72px; }
+
+  .brand strong { font-size: 1.05rem; }
+
+  .hero { min-height: 650px; }
+  .hero-content { padding-block: 75px; }
+  .hero h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
+  .hero-copy > p { font-size: 1rem; }
+
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+
+  .trust-grid,
+  .feature-grid,
+  .category-grid,
+  .crop-grid,
+  .product-grid,
+  .product-grid-featured,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-grid div,
+  .trust-grid div:nth-child(3),
+  .trust-grid div:nth-child(4) {
+    border-left: 1px solid var(--border);
+    border-top: 0;
+  }
+
+  .trust-grid div + div { border-top: 1px solid var(--border); }
+
+  .split-heading { flex-direction: column; }
+
+  .category-card { min-height: 280px; }
+
+  .crop-card { min-height: auto; }
+
+  .automation-diagram {
+    min-height: 400px;
+    padding: 25px;
+  }
+
+  .zones {
+    left: 15px;
+    right: 15px;
+    gap: 5px;
+  }
+
+  .diagram-node { min-width: 92px; }
+
+  .cta-inner,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-brand { grid-row: auto; }
+
+  .page-hero { padding: 65px 0; }
+  .page-hero h1 { font-size: 3rem; }
+
+  .catalog-summary { align-items: center; }
+
+  .detail-actions .btn { width: 100%; }
+
+  .spec-row { grid-template-columns: 1fr; gap: 4px; }
+
+  .solution-row {
+    grid-template-columns: 42px 55px 1fr;
+    gap: 10px;
+  }
+
+  .mission-grid { grid-template-columns: 1fr; }
+
+  .enquiry-actions { grid-template-columns: 1fr; }
+
+  .floating-actions {
+    right: 12px;
+    bottom: 14px;
+  }
+
+  .float-action {
+    width: 46px;
+    height: 46px;
+  }
+
+  .float-action span { display: none; }
+
+  .toast {
+    width: calc(100% - 40px);
+    text-align: center;
+    border-radius: 14px;
+  }
+}

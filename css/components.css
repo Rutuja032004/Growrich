@@ -1,0 +1,97 @@
+/* Reusable component-level polish and small UI details. */
+
+.reveal {
+  animation: revealUp .7s ease both;
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.product-card,
+.feature-card,
+.category-card,
+.solution-row {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.product-card:hover,
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.brand-mark i {
+  transform: rotate(8deg);
+}
+
+.topbar-socials a {
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+}
+
+.topbar-socials i {
+  font-size: .72rem;
+}
+
+.nav-quote {
+  margin-left: 4px;
+}
+
+.detail-copy .eyebrow {
+  margin-bottom: 12px;
+}
+
+.contact-card h2 {
+  font-size: 2.4rem;
+}
+
+.contact-form .btn {
+  min-width: 190px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(40,168,137,.28);
+  outline-offset: 3px;
+}
+
+
+.enquiry-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.enquiry-actions .btn {
+  min-width: 0;
+  justify-content: center;
+}
+
+.btn-whatsapp {
+  background: #1f9d63;
+  color: #fff;
+  border-color: #1f9d63;
+}
+
+.btn-whatsapp:hover {
+  background: #187a4d;
+  border-color: #187a4d;
+}
+
+.btn-email {
+  background: var(--green-900);
+  color: #fff;
+  border-color: var(--green-900);
+}
+
+.btn-email:hover {
+  background: var(--green-950);
+  border-color: var(--green-950);
+}
