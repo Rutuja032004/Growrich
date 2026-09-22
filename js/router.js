@@ -3,7 +3,8 @@ const ROUTES = {
   products: "#/products",
   solutions: "#/solutions",
   about: "#/about",
-  contact: "#/contact"
+  contact: "#/contact",
+  services: "#/services"
 };
 
 export function navigate(path = "/") {
@@ -14,18 +15,20 @@ export function navigate(path = "/") {
 export function getRoute() {
   const raw = window.location.hash.replace(/^#/, "") || "/";
   const clean = raw.startsWith("/") ? raw : `/${raw}`;
+  const routePath = clean.split("?")[0];
 
-  if (clean.startsWith("/product/")) {
+  if (routePath.startsWith("/product/")) {
     return {
       name: "product",
-      slug: decodeURIComponent(clean.replace("/product/", ""))
+      slug: decodeURIComponent(routePath.replace("/product/", ""))
     };
   }
 
-  if (clean === "/products") return { name: "products" };
-  if (clean === "/solutions") return { name: "solutions" };
-  if (clean === "/about") return { name: "about" };
-  if (clean === "/contact") return { name: "contact" };
+  if (routePath === "/products") return { name: "products" };
+  if (routePath === "/solutions") return { name: "solutions" };
+  if (routePath === "/about") return { name: "about" };
+  if (routePath === "/contact") return { name: "contact" };
+  if (routePath === "/services") return { name: "services" };
 
   return { name: "home" };
 }
