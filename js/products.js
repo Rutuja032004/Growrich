@@ -27,6 +27,7 @@ export const categories = [
   {
     id: "drip",
     name: "Drip Irrigation",
+    image: "assets/images/categories/drip-irrigation.jpg",
     eyebrow: "01",
     description: "Precision water delivery through drip tapes, hoses, emitters, valves and fittings.",
     icon: "fa-droplet"
@@ -34,6 +35,7 @@ export const categories = [
   {
     id: "spray",
     name: "Spray Irrigation",
+    image: "assets/images/categories/spray-irrigation.webp",
     eyebrow: "02",
     description: "Sprinklers, micro-sprinklers, rain guns and accessories for flexible field coverage.",
     icon: "fa-water"
@@ -41,6 +43,7 @@ export const categories = [
   {
     id: "mainline",
     name: "Main Line & Pipes",
+    image: "assets/images/categories/main-line-pipes.webp",
     eyebrow: "03",
     description: "Layflat hoses, PE pipes, composite pipes, braided hoses and main-line fittings.",
     icon: "fa-grip-lines"
@@ -48,13 +51,16 @@ export const categories = [
   {
     id: "compression",
     name: "Compression Fittings & PVC Valves",
+    image: "assets/images/categories/compression-fittings-pvc-valves.webp",
     eyebrow: "04",
     description: "Pipeline connection, diversion and flow-control components for irrigation systems.",
     icon: "fa-link"
   },
   {
     id: "other",
+    visible: false,
     name: "Other Agriculture Products",
+    image: "assets/images/categories/other-agriculture-products.png",
     eyebrow: "05",
     description: "Seedling trays, filters, air-release valves, vacuum breakers and filtration systems.",
     icon: "fa-seedling"
@@ -484,6 +490,7 @@ export const cropSolutions = [
   {
     id: "cereals",
     name: "Cereals",
+    image: "assets/images/crops/cereals.webp",
     icon: "fa-wheat-awn",
     description: "Structured irrigation planning for field-scale crop production.",
     tags: ["Drip", "Sprinkler", "Main Line"]
@@ -491,6 +498,7 @@ export const cropSolutions = [
   {
     id: "cotton",
     name: "Cotton",
+    image: "assets/images/crops/cotton.jpg",
     icon: "fa-leaf",
     description: "Water-delivery options for efficient field irrigation.",
     tags: ["Drip", "Spray", "Filtration"]
@@ -498,6 +506,7 @@ export const cropSolutions = [
   {
     id: "sugarcane",
     name: "Sugarcane",
+    image: "assets/images/crops/sugarcane.jpg",
     icon: "fa-seedling",
     description: "Irrigation components for high-water-demand field crops.",
     tags: ["Drip", "Main Line", "Valves"]
@@ -505,6 +514,7 @@ export const cropSolutions = [
   {
     id: "horticulture",
     name: "Horticulture",
+    image: "assets/images/crops/horticulture.jpg",
     icon: "fa-apple-whole",
     description: "Precision delivery options for orchards and horticultural crops.",
     tags: ["Drip", "Micro-Sprinkler", "Filters"]
@@ -512,6 +522,7 @@ export const cropSolutions = [
   {
     id: "protected",
     name: "Protected Cultivation",
+    image: "assets/images/crops/protected-cultivation.webp",
     icon: "fa-house",
     description: "Controlled irrigation options for greenhouses and protected growing.",
     tags: ["Drip", "Fogging", "Micro-Spray"]

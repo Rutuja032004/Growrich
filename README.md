@@ -1,76 +1,57 @@
 # GrowRich Revamp — Single Page Demonstration
 
-A frontend-only single-page application (SPA) demonstration for the GrowRich Industries website revamp.
+Updated SPA prototype for GrowRich Industries using HTML5, CSS3 and vanilla JavaScript ES modules.
 
-## Stack
+## Revamp implemented
 
-- HTML5
-- CSS3
-- Vanilla JavaScript (ES modules)
-- Font Awesome 6.6.0 CDN
-- Google Fonts
-- Hash-based client-side routing
+- Light-blue + light-green visual theme.
+- Supplied GrowRich Industries logo integrated into the header and footer branding.
+- Three supplied hero banners displayed as an automatic slider with arrows and dots.
+- Home-page order changed to:
+  1. Hero
+  2. Product Categories
+  3. Crop Suggestions
+  4. Core Products
+  5. Why GrowRich
+  6. About GrowRich
+  7. Setup / Services
+  8. Request a Quote
+  9. Existing footer
+- Supplied images mapped to all five product categories and five crop cards.
+- Crop cards include expandable **View suggestions** controls.
+- Setup / Services is available as a dedicated SPA route and in the main navigation.
+- Contact form now has one common **Send Message Everywhere** action that opens WhatsApp, SMS, Facebook, LinkedIn and Email actions. Each platform still requires the user to complete the final send/share step because browsers do not allow a website to silently send messages on a user's behalf.
+- WhatsApp, Instagram, Facebook, LinkedIn and Call controls are visibly available in the top bar, contact page and floating contact rail. Instagram/Facebook/LinkedIn remain placeholders until approved company URLs are supplied.
+- Reduced section padding/card spacing and increased useful content density.
+- Fixed product-category query routing so links such as `#/products?category=drip` work correctly.
 
-## Project structure
+## Supplied asset mapping
 
-```text
-growrich-revamp/
-├── index.html
-├── css/
-│   ├── style.css
-│   ├── responsive.css
-│   └── components.css
-├── js/
-│   ├── app.js
-│   ├── products.js
-│   ├── router.js
-│   └── ui.js
-├── assets/
-│   ├── images/
-│   │   ├── hero/
-│   │   │   └── growrich-hero.jpg
-│   │   ├── products/
-│   │   │   ├── drip-tape-flat-emitter-inline.png
-│   │   │   ├── pressure-compensating-drip-tape.jpg
-│   │   │   ├── swing-arm-sprinkler.jpg
-│   │   │   ├── pe-layflat-hose.jpg
-│   │   │   ├── pp-compression-ball-valve.jpg
-│   │   │   └── automatic-self-cleaning-filter.webp
-│   │   ├── crops/
-│   │   └── about/
-│   └── icons/
-└── README.md
-```
+### Brand
+- `assets/images/brand/growrich-logo.png`
 
-## Included demo features
+### Hero
+- `assets/images/hero/grow-more-less-water.png`
+- `assets/images/hero/precision-irrigation-smarter-farming.png`
+- `assets/images/hero/resource-smart-yield-focused-farming.png`
 
-- Responsive top contact/social bar
-- Sticky navigation and mobile menu
-- Hero section using the supplied GrowRich hero background image
-- Product categories and searchable catalogue
-- Product detail routes
-- Supplied product images mapped to the matching catalogue products
-- Crop/application solution section
-- Smart-irrigation concept section
-- About section
-- Floating WhatsApp and Call actions
-- Enquiry form with **Send via WhatsApp** and **Send via Email** actions
-- No backend required for enquiry demonstration
+### Product categories
+- Drip Irrigation → `assets/images/categories/drip-irrigation.jpg`
+- Spray Irrigation → `assets/images/categories/spray-irrigation.webp`
+- Main Line & Pipes → `assets/images/categories/main-line-pipes.webp`
+- Compression Fittings & PVC Valves → `assets/images/categories/compression-fittings-pvc-valves.webp`
+- Other Agriculture Products → `assets/images/categories/other-agriculture-products.png`
 
-## Supplied product-image mapping
-
-| Product | Asset |
-|---|---|
-| Drip Tape with Flat Emitter In-Line | `assets/images/products/drip-tape-flat-emitter-inline.png` |
-| Pressure Compensating Drip Tape | `assets/images/products/pressure-compensating-drip-tape.jpg` |
-| Swing Arm Sprinkler | `assets/images/products/swing-arm-sprinkler.jpg` |
-| PE Layflat Hose / Pre-Punched Flat Hose | `assets/images/products/pe-layflat-hose.jpg` |
-| PP Compression Ball Valve | `assets/images/products/pp-compression-ball-valve.jpg` |
-| Automatic Self-Cleaning Filter System | `assets/images/products/automatic-self-cleaning-filter.webp` |
+### Crop suggestions
+- Cereals → `assets/images/crops/cereals.webp`
+- Cotton → `assets/images/crops/cotton.jpg`
+- Sugarcane → `assets/images/crops/sugarcane.jpg`
+- Horticulture → `assets/images/crops/horticulture.jpg`
+- Protected Cultivation → `assets/images/crops/protected-cultivation.webp`
 
 ## Run locally
 
-Open the folder in VS Code and use Live Server, or run a simple local server:
+Open the folder in VS Code and use Live Server, or run:
 
 ```bash
 python -m http.server 5500
@@ -78,8 +59,26 @@ python -m http.server 5500
 
 Then open `http://localhost:5500`.
 
-## Important demo note
+## Git workflow
 
-This is intentionally a frontend demonstration. Product content should be verified against the final GrowRich-approved catalogue before production deployment. Replace placeholder imagery for products that do not yet have approved images.
+Work on the assigned feature branch. Review the changes locally, then:
 
-Social links for Instagram, Facebook and LinkedIn are left as placeholders until the approved URLs are supplied.
+```bash
+git status
+git add .
+git commit -m "Implement GrowRich revamp updates"
+git push origin <your-branch-name>
+```
+
+Create a Pull Request from the feature branch into `main` after review.
+
+
+## Phase 1 update (no new image assets added)
+
+- Added independent copy and CTAs for each hero slide while retaining the current supplied images temporarily.
+- Shifted large-area sections toward a very light blue/green/white palette and removed heavy dark section backgrounds.
+- Added a top-right View All Crops action and richer supporting copy to major home sections.
+- Added subtle scroll-reveal/card-hover motion with prefers-reduced-motion support.
+- Removed Other Agriculture Products from the visible home Product Categories display without deleting its catalogue data/assets.
+- Added image-ready hooks for Why GrowRich and Setup / Services cards; no placeholder/random images were added.
+- Marked the existing About images as replaceable image slots for Phase 3.
