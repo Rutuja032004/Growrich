@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720">
-<defs><linearGradient id="p" x1="0" x2="1"><stop stop-color="#eaf6f1"/><stop offset="1" stop-color="#dcefeb"/></linearGradient></defs>
-<rect width="900" height="720" fill="url(#p)"/>
-<circle cx="690" cy="120" r="90" fill="#d8e75c" opacity=".5"/><circle cx="150" cy="580" r="130" fill="#0b6b57" opacity=".10"/>
-<path d="M100 410 C260 350 370 440 520 380 S760 330 830 400" fill="none" stroke="#0b6b57" stroke-width="44" stroke-linecap="round"/>
-<path d="M120 410 C275 350 380 440 530 380 S750 340 820 400" fill="none" stroke="#111c18" stroke-width="31" stroke-linecap="round"/>
-<g fill="#28a889"><circle cx="250" cy="377" r="8"/><circle cx="370" cy="409" r="8"/><circle cx="500" cy="389" r="8"/><circle cx="630" cy="366" r="8"/></g>
-<text x="450" y="620" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#0b6b57">PRODUCT IMAGE PLACEHOLDER</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560"><rect width="800" height="560" fill="#e8f4f0"/><circle cx="400" cy="250" r="130" fill="#0b765f" opacity=".12"/><path d="M400 120c-90 100-100 170 0 230 100-60 90-130 0-230z" fill="#0b765f"/><text x="400" y="455" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#07533f">GrowRich</text></svg>
